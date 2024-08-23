@@ -1,0 +1,116 @@
+.truffle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2b2f4c, #1b1e3c);
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.truffle-input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 450px;
+    border: 2px solid #00c9ff;
+    border-radius: 8px;
+    background-color: #141627;
+    color: #ffffff;
+}
+
+.truffle-btn {
+    background-color: #00c9ff;
+    color: #1b1e3c;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.truffle-btn:hover {
+    background-color: #00a3cc;
+    color: #ffffff;
+}
+
+.info-box {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 450px;
+    background-color: #1b1e3c;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.info-card {
+    background-color: #2b324c;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.info-card:hover {
+    background-color: #353a5c;
+}
+
+.info-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00c9ff;
+}
+
+.info-value {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.loading-message {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #00c9ff;
+}
+
+/* Barra de carga */
+.loader {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 450px;
+    height: 4px;
+    background-color: #00c9ff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #00a3cc;
+    animation: loader-animation 1s infinite;
+}
+
+@keyframes loader-animation {
+    0% {
+        left: -50%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: -50%;
+    }
+}
