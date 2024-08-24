@@ -1,2 +1,2 @@
 # Truflle-Metamask
-Este ejemplo muestra cómo usar Truffle junto con Metamask para realizar consultas a un contrato inteligente, específicamente para obtener datos relacionados con una cuenta en particular, utilizando su número de cuenta (address).
+This example shows how to use Truffle together with Metamask to query a smart contract, specifically to obtain data related to a particular account, using its account number (address).
