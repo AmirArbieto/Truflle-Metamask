@@ -29,7 +29,18 @@ export class TruffleComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     if (typeof window.ethereum !== 'undefined') {
       console.log('MetaMask está instalado.');
-      this.web3 = new Web3(window.ethereum);
+      
+      // Solicita acceso a la cuenta del usuario
+      try {
+        // Pide al usuario acceso a sus cuentas
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        this.account = accounts[0]; // Asigna la primera cuenta
+        this.web3 = new Web3(window.ethereum); // Inicializa Web3
+        console.log('Cuenta conectada:', this.account);
+        this.cd.detectChanges();
+      } catch (error) {
+        console.error('Error al conectar con MetaMask:', error);
+      }
     } else {
       console.error('MetaMask no está instalado.');
     }
